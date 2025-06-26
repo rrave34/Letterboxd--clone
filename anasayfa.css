@@ -24,20 +24,20 @@ header {
 }
 
 main {
-    background-image: url('https://i.imgur.com/L1nJ5aH.jpeg');
-    background-size: cover;
+   background-size: cover;
     background-position: center top;
     background-attachment: fixed;
-    padding-top: 100px;
-    min-height: 100vh;
+    padding-top: 200px;
+    min-height: 200vh;
     box-sizing: border-box;
 }
 
 .hero-section {
-    height: 75vh;
-    padding-top: 80px;
-    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/1400/1ff32471010161.5bb651233f8de.jpg');
+    height: 100%;
+    padding-top: 200px;
+    background-image: url("slider.jpg");
     background-size: none;
+    background-repeat: no-repeat;
     background-position: center center;
     display: flex;
     align-items: center;
@@ -126,7 +126,7 @@ nav a:hover {
 }
 
 .cta-buttons a {
-    background-color: #00e054;
+    background-color: #00ac1c;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -292,7 +292,7 @@ nav a:hover {
 }
 
 .just-reviewed-grid .film-poster {
-  width: 150px;
+  width: 100px;
 }
 footer {
     background-color: #2c3440;
@@ -319,7 +319,130 @@ footer {
     font-size: 14px;
     margin-bottom: 20px;
 }  
-.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col ul { list-style: none; padding: 0; margin: 0; } 
 .footer-col ul li { margin-bottom: 10px; }
 .footer-col ul li a { color: #9ab; text-decoration: none; }
 .footer-col ul li a:hover { color: #fff; }
+ 
+
+
+body {
+    background: #000000;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+textarea {
+    resize: none;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-tiktok, .fa-youtube, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+
+.rounded-social-buttons .social-button.X {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.X:hover, .rounded-social-buttons .social-button.X:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #000203;
+  background: #fefefe;
+  border-color: #030607;
+}
+
+.rounded-social-buttons .social-button.tiktok {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.tiktok:hover, .rounded-social-buttons .social-button.tiktok:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #000000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #000000;
+  background: #fefefe;
+  border-color: #000000;
+}
+    
+.rounded-social-buttons .social-button.instagram {
+  background: #091014;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #040e14;
+  background: #fefefe;
+  border-color: #000000;
+}
