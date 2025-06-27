@@ -1,236 +1,219 @@
-body {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #14181c;
-    color: #9ab;
-    margin: 0;
-    padding: 0;
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #14181c; 
+    color: #9ab; 
+    margin: 0; 
+    padding: 0; 
+    padding-top: 70px; 
 }
 
-header {
-    background-color: rgba(28, 32, 37, 0.65);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 15px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(154, 187, 204, 0.1);
+h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Source Serif 4', serif; 
+    font-weight: 700; 
+    color: #fff; 
+}
+
+header { 
+    background-color: transparent; 
+    -webkit-backdrop-filter: blur(12px); 
+    backdrop-filter: blur(12px); 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    padding: 12px 60px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-bottom: 1px solid rgba(154, 187, 204, 0.1); 
+    box-sizing: border-box; 
+    height: 70px; 
+}
+
+.header-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 25px; 
+}
+
+.logo a img { 
+    height: 24px; 
+    display: block; 
+}
+
+nav { 
+    margin-left: 0; 
+}
+
+nav a { 
+    color: #e0e0e0; 
+    text-decoration: none; 
+    margin-left: 18px; 
+    font-size: 13px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.2px; 
+    transition: color 0.3s ease; 
+}
+
+nav a:hover { 
+    color: #ffffff; 
+}
+
+.search-container { 
+    position: relative; 
+    margin-left: 30px; 
+}
+
+.search-container input { 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    border-radius: 18px; 
+    color: #fff; 
+    padding: 8px 40px 8px 18px; 
+    width: 250px; 
+    height: 36px; 
+    box-sizing: border-box; 
+    font-size: 14px; 
+}
+
+.search-container input:focus { 
+    outline: none; 
+}
+
+.search-container .fa-magnifying-glass { 
+    position: absolute; 
+    right: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: #d4dce4; 
+}
+
+main { 
+    background-size: cover; 
+    background-position: center top; 
+    background-attachment: fixed; 
+    box-sizing: border-box; 
+}
+
+.hero-section { 
+    position: relative; 
+    background-image: url('slider.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 70vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+    overflow: hidden; 
+    margin-top: -70px; 
+}
+
+.hero-section::before { 
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 1; 
+    background: linear-gradient(to top, #14181c 0%, rgba(20, 24, 28, 0.5) 50%, #14181c 100%), radial-gradient(ellipse at center, rgba(20, 24, 28, 0) 0%, #14181c 100%); 
+}
+
+.welcome-section { 
+    z-index: 2; 
+    max-width: 800px; 
+    text-align: center; 
+    color: #fff; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
+}
+
+.welcome-section h1 { 
+    font-size: 48px; 
+    margin-bottom: 20px; 
+    line-height: 1.2; 
+}
+
+.welcome-section p { 
+    font-size: 18px; 
+    line-height: 1.6; 
+    margin-bottom: 30px; 
+}
+
+.cta-buttons a { 
+    background-color: #00ac1c; 
+    color: #fff; 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+}
+
+.browse-by { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+    margin: 40px 0; 
+    color: #89a; 
+    font-size: 1rem; 
+}
+
+.store-logo { 
+    font-size: 28px; 
+    color: #89a; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.store-logo:hover { 
+    color: #fff; 
+}
+
+.film-galerisi,
+.features-section,
+.reviewed-films { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 20px; 
     box-sizing: border-box;
 }
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: "Giant Gnome";
-    unicode-bidi: isolate;
-}
-main {
-   background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
-    padding-top: 200px;
-    min-height: 200vh;
-    box-sizing: border-box;
-}
 
-.hero-section {
-    position: relative;
-    background-image: url('slider.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-}
-
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(to right, #0a0a0a 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #0a0a0a 100%);
-}
-
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 2rem;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #00e054;
-    color: #000;
-    padding: 1rem 2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 1rem;
-}
-
-
-.welcome-section {
-    max-width: 800px;
-    text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-}
-
-.search-container {
-    position: relative;
-}
-
-.search-container input {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid #445566;
-    border-radius: 15px;
-    color: #fff;
-    padding: 8px 15px;
-    padding-right: 35px;
-    width: 250px;
-}
-
-.search-container .fa-magnifying-glass {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #9ab;
-    pointer-events: none;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo svg {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-}
-
-nav {
-    margin-left: 30px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-nav a:hover {
-    color: #a1b4a9;
-}
-
-.welcome-section h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.welcome-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.cta-buttons a {
-    background-color: #00ac1c;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.browse-by {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.browse-by a {
-    color: #9ab;
-    text-decoration: none;
-}
-
-.film-galerisi {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.features-section {
-    margin-bottom: 80px;
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 15px;
-}
-
-.features-section h2, .film-galerisi h2 {
-    color: #9ab;
-    text-transform: uppercase;
+.features-section h2, 
+.film-galerisi h2 { 
+    text-transform: uppercase; 
     letter-spacing: 2px;
     font-size: 16px;
-    margin-bottom: 25px;
-    text-align: left;
+    margin-bottom: 25px; 
+    text-align: left; 
 }
 
-.film-galerisi h2 {
-    text-align: center;
+.film-galerisi h2 { 
+    text-align: center; 
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
 }
 
-.feature-box {
-    background-color: #2c3440;
-    border-radius: 8px;
-    padding: 25px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.feature-box { 
+    background-color: #2c3440; 
+    border-radius: 8px; 
+    padding: 25px; 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
-.feature-box:hover {
-    transform: translateY(-5px);
+.feature-box:hover { 
+    transform: translateY(-5px); 
 }
 
 .features-grid .feature-box:nth-child(1):hover { background-color: #00db1d; }
@@ -240,49 +223,44 @@ nav a:hover {
 .features-grid .feature-box:nth-child(5):hover { background-color: #ca5100; }
 .features-grid .feature-box:nth-child(6):hover { background-color: #00a2ff; }
 
-.feature-icon i {
-    font-size: 36px;
-    color: #00e054;
-    margin-top: 5px;
-    transition: color 0.3s ease;
+.feature-icon i { 
+    font-size: 36px; 
+    color: #b9b9b9; 
+    margin-top: 5px; 
 }
 
-.feature-text {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #dbe0e4;
-    transition: color 0.3s ease;
-    text-align: left;
+.feature-text { 
+    font-size: 15px; 
+    line-height: 1.6; 
+    color: #ffffff; 
+    text-align: left; 
 }
 
-.feature-box:hover .feature-icon i,
-.feature-box:hover .feature-text {
-    color: #ffffff;
+.film-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 25px; 
 }
 
-.film-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.film-poster {
-    width: 200px;
-    border-radius: 8px;
-    overflow: hidden;
+.film-poster { 
+    width: 200px; 
+    border-radius: 8px; 
+    overflow: hidden; 
     position: relative; 
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
 }
 
-.film-poster:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 224, 84, 0.3);
+.film-poster:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 25px rgba(0, 224, 84, 0.3); 
 }
 
-.film-poster img {
+.film-poster img { 
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
 }
 
 .poster-overlay {
@@ -291,238 +269,269 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 60%);
+    background-color: rgba(0, 0, 0, 0.65); 
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: center; 
+    align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.film-poster:hover .poster-overlay {
-    opacity: 1;
+.film-poster:hover .poster-overlay { 
+    opacity: 1; 
 }
 
 .poster-stats {
     color: #fff;
-    font-size: 16px;
-    font-weight: bold;
+    font-weight: 700; 
     display: flex;
     flex-direction: column; 
+    align-items: center; 
     gap: 10px;
     width: 100%;
     text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .poster-stats span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 22px; 
+    letter-spacing: 0.5px;
 }
 
 .poster-stats i {
-    margin-right: 8px;
-    color: #00e054;
-}
-
-
-.svg-inline--fa {
-  vertical-align: -0.200em;
-}
-just-reviewed-section {
-     max-width: 100%; 
-     margin: 60px auto; 
-     padding: 0 80px; 
-     box-sizing: border-box;
-}
-
-
-.just-reviewed-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.just-reviewed-header h2 {
-    color: #9ab;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 36px; 
     margin: 0;
+    margin-bottom: 5px; 
 }
 
-.just-reviewed-header .film-count {
-    font-size: px;
-    color: #9ab;
-    text-align: right;
+.poster-stats .fa-eye {
+    color: #029b35; 
+}   
+
+.poster-stats .fa-heart {
+    color: #ff9900; 
 }
 
-
-.just-reviewed-section hr {
-    border: 0;
-    height: 1px;
-    background: rgba(154, 187, 204, 0.1);
-    margin: 15px 0 25px 0;
+.reviewed-films { 
+    max-width: 1200px; 
+    margin: 60px auto; 
+    padding: 20px; 
 }
 
-.just-reviewed-grid .film-poster {
- width: 140px;
-height: 210px;
-border: 2px solid transparent; 
+.just-reviewed-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: baseline; 
+    margin-bottom: 15px; 
+}
+
+.just-reviewed-header h2 { 
+    font-family: 'Inter', sans-serif; 
+    font-size: 16px; 
+    color: #9ab; 
     margin: 0; 
-    gap: 0;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
 }
 
+#live-count { 
+    font-size: 14px; 
+    color: #678; 
+}
 
-.just-reviewed-poster:hover {
-    box-shadow: 0 0 0 3px #00e054; 
+.section-divider { 
+    border: none; 
+    height: 1px; 
+    background-color: rgba(154, 187, 204, 0.1); 
+    margin-bottom: 25px; 
+}
+
+.just-reviewed-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 15px; 
+}
+
+.just-reviewed-grid .film-poster { 
+    width: calc(100% / 12 - 16px); 
+    height: auto;
+}
+
+.just-reviewed-poster:hover { 
+    box-shadow: 0 0 0 2px #00e054; 
     transform: scale(1.03);
 }
 
-
-footer {
-    background-color: #2c3440;
-    padding: 40px;
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-around;
-    border-top: 1px solid #445566;
+footer { 
+    background-color: #2c3440; 
+    color: #9ab; 
+    padding: 40px; 
+    margin-top: 60px; 
+    border-top: 1px solid #445566; 
 }
 
-.footer-col {
-    flex: 1;
-    padding: 0 20px;
+.footer-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
 }
 
-.footer-col {
-    flex: 1;
-    padding: 0 20px ;
+.footer-links { 
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px 20px; 
 }
 
-.footer-col h4 {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 20px;    
-}  
-.footer-col ul { list-style: none; padding: 0; margin: 0; } 
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col ul li a { color: #9ab; text-decoration: none; }
-.footer-col ul li a:hover { color: #fff; }
- 
-
-
-body {
-    background: #14181c;
-    padding-top: 60px;
-    padding-bottom: 40px;
+.footer-links a { 
+    color: #9ab; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
 }
 
-textarea {
-    resize: none;
+.footer-links a:hover { 
+    color: #fff; 
 }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  white-space: nowrap;
+.footer-social-icons { 
+    margin-bottom: 20px; 
 }
 
-
-
-.svg-inline--fa {
-  vertical-align: -0.200em;
+.footer-social-icons a { 
+    color: #9ab; 
+    font-size: 20px; 
+    margin: 0 12px; 
+    transition: color 0.3s ease; 
 }
 
-.rounded-social-buttons {
-  text-align: center;
+.footer-social-icons a:hover { 
+    color: #fff; 
 }
 
-.rounded-social-buttons .social-button {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  width: 3.125rem;
-  height: 3.125rem;
-  border: 0.125rem solid transparent;
-  padding: 0;
-  text-decoration: none;
-  text-align: center;
-  color: #fefefe;
-  font-size: 1.5625rem;
-  font-weight: normal;
-  line-height: 2em;
-  border-radius: 1.6875rem;
-  transition: all 0.5s ease;
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-
-.rounded-social-buttons .fa-twitter, .fa-facebook-f, .fa-linkedin, .fa-tiktok, .fa-youtube, .fa-instagram {
-  font-size: 25px;
-}
-
-.rounded-social-buttons .social-button.facebook {
-  background: #000000;
-}
-
-
-.rounded-social-buttons .social-button.X {
-  background: #000000;
+.footer-copyright p { 
+    margin: 0; 
+    font-size: 12px; 
+    color: #89a; 
 }
 
 
 
-.rounded-social-buttons .social-button.linkedin {
-  background: #000000;
+@media (max-width: 992px) {
+    header {
+        padding: 12px 30px;
+    }
+
+    .film-galerisi,
+    .features-section,
+    .reviewed-films,
+    .footer-container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .just-reviewed-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .just-reviewed-grid .film-poster {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    header {
+        height: 60px;
+        padding: 10px 20px;
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav, .search-container {
+        display: none;
+    }
+
+    .hero-section {
+        height: 60vh;
+        margin-top: -60px;
+    }
+
+    .welcome-section h1 {
+        font-size: 36px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .film-grid {
+        gap: 20px;
+    }
+
+    .film-poster {
+        width: 180px;
+    }
+
+    .browse-by {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 
 
-.rounded-social-buttons .social-button.tiktok {
-  background: #000000;
-}
+@media (max-width: 480px) {
+    .welcome-section h1 {
+        font-size: 28px;
+    }
+
+    .cta-buttons a {
+        padding: 12px 24px;
+        font-size: 14px; 
+    }
 
 
+    .film-galerisi,
+    .features-section,
+    .reviewed-films {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
-.rounded-social-buttons .social-button.youtube {
-  background: #000000;
-}
+    .film-grid {
+        justify-content: space-between;
+    }
 
-
-    
-.rounded-social-buttons .social-button.instagram {
-  background: #091014;
-}
-
-.browse-by {
-  display: flex;
-  justify-content: center; 
-  align-items: center;   
-  gap: 15px;               
-  margin: 40px 0;      
-  color: #89a;             
-  font-size: 1rem;         
-}
-
-
-.store-logo {
-  font-size: 28px;      
-  color: #89a;            
-  text-decoration: none;  
-  transition: color 0.3s ease; 
-}
-
-.store-logo:hover {
-  color: #fff;
+    .film-poster {
+        width: calc(50% - 10px);
+    }
 }

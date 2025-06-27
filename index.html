@@ -1,199 +1,104 @@
-        <!DOCTYPE html>
-        <html lang="tr">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Letterboxd</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-            <link rel="stylesheet" href="anasayfa.css">
-        </head>
-        <body>
+<!DOCTYPE html>
+<html lang="tr">
 
-            <header>
-                <div class="header-left">
-        <div class="logo">
-            <a href="#">
-                <img src="Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo" height="20">
-            </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letterboxd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="anasayfa.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="#"><img src="Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo"></a>
+            </div>
+            <nav>
+                <a href="#">SIGN IN</a><a href="#">CREATE ACCOUNT</a><a href="#">FILMS</a><a href="#">LISTS</a><a href="#">MEMBERS</a><a href="#">JOURNAL</a>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..."><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="welcome-section">
+                <h1>Track films you’ve watched.</h1>
+                <h1>Save those you want to see.</h1>
+                <h1>Tell your friends what’s good.</h1>
+                <p>Get started today — it’s free. The social network for film lovers.</p>
+                <div class="cta-buttons"><a href="#">Get started- It's Free</a></div>
+            </div>
+        </div>
+        
+        <div class="browse-by">
+            <span>The social network for film lovers. Also available on</span>
+            <a href="#" class="store-logo"><i class="fa-brands fa-apple"></i></a>
+            <a href="#" class="store-logo"><i class="fa-brands fa-android"></i></a>
         </div>
 
-                    <nav>
-                        <a href="#">SIGN IN</a><a href="#">CREATE ACCOUNT</a><a href="#">FILMS</a><a href="#">LISTS</a><a href="#">MEMBERS</a><a href="#">JOURNAL</a>
-                    </nav>
-                </div>
-                <div class="search-container">
-                    <input type="text" placeholder="Search for a film, list, or person...">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </header>
-
-            <div class="hero-section">
-                <div class="hero-content"></div>
-                <div class="welcome-section">
-                    <h1>Track films you’ve watched.</h1>
-                    <h1>Save those you want to see.</h1>
-                    <h1>Tell your friends what’s good.</h1>
-                    <p>Get started today — it’s free. The social network for film lovers.</p>
-                    <div class="cta-buttons">
-                        <a href="#">Get started- It's Free</a>
-                    </div>
-                </div>
-            </div>
-
-            <main>
-            <div class="browse-by">
-                <span>The social network for film lovers. Also available on</span>
-                <a href="https://apps.apple.com/us/app/letterboxd/id1054271011" aria-label="Download on the App Store" class="store-logo">
-                    <i class="fa-brands fa-apple"></i>
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.letterboxd.letterboxd" aria-label="Get it on Google Play" class="store-logo">
-                    <i class="fa-brands fa-android"></i>
-                </a>
-            </div>
-
-            <div class="film-galerisi">
-            <h2>POPÜLER FİLMLER</h2>
+        <div class="film-galerisi">
+            <h2>POPULAR MOVIES</h2>
             <div class="film-grid">
-                <div class="film-poster">
-                    <a href="#">
-                        <img src="https://weltecho.eu/wp-content/uploads/dune-hoch-790x1161.jpg" alt="Dune: Part Two film afişi">
-                        <div class="poster-overlay">
-                            <div class="poster-stats">
-                                <span><i class="fa-solid fa-eye"></i> 1.2M</span>
-                                <span><i class="fa-solid fa-heart"></i> 250K</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a href="#">
-                        <img src="https://m.media-amazon.com/images/M/MV5BZTU4YTUzNGMtZjUyZC00MWU3LWFiZmItMmIwMDA5YmViNGU3XkEyXkFqcGc@._V1_.jpg" alt="Hitman">
-                        <div class="poster-overlay">
-                            <div class="poster-stats">
-                                <span><i class="fa-solid fa-eye"></i> 850K</span>
-                                <span><i class="fa-solid fa-heart"></i> 180K</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a href="#">
-                        <img src="https://tr.web.img4.acsta.net/pictures/22/11/30/19/53/5856320.jpg" alt="The Last Of Us">
-                        <div class="poster-overlay">
-                            <div class="poster-stats">
-                                <span><i class="fa-solid fa-eye"></i> 2.1M</span>
-                                <span><i class="fa-solid fa-heart"></i> 980K</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="film-poster">
-                    <a href="#">
-                        <img src="https://m.media-amazon.com/images/I/81+HfwcH-lL.jpg" alt="Spider-Man: Across the Spider-Verse film afişi">
-                        <div class="poster-overlay">
-                            <div class="poster-stats">
-                                <span><i class="fa-solid fa-eye"></i> 3.5M</span>
-                                <span><i class="fa-solid fa-heart"></i> 1.8M</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                    <div class="film-poster">
-                    <a href="#">
-                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer film afişi">
-                        <div class="poster-overlay">
-                            <div class="poster-stats">
-                                <span><i class="fa-solid fa-eye"></i> 4.2M</span>
-                                <span><i class="fa-solid fa-heart"></i> 2.1M</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <div class="film-poster"><a href="#"><img src="https://weltecho.eu/wp-content/uploads/dune-hoch-790x1161.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 1.2M</span><span><i class="fa-solid fa-heart"></i> 250K</span></div></div></a></div>
+                <div class="film-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BZTU4YTUzNGMtZjUyZC00MWU3LWFiZmItMmIwMDA5YmViNGU3XkEyXkFqcGc@._V1_.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 850K</span><span><i class="fa-solid fa-heart"></i> 180K</span></div></div></a></div>
+                <div class="film-poster"><a href="#"><img src="https://tr.web.img4.acsta.net/pictures/22/11/30/19/53/5856320.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 2.1M</span><span><i class="fa-solid fa-heart"></i> 980K</span></div></div></a></div>
+                <div class="film-poster"><a href="#"><img src="https://m.media-amazon.com/images/I/81+HfwcH-lL.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 3.5M</span><span><i class="fa-solid fa-heart"></i> 1.8M</span></div></div></a></div>
+                 <div class="film-poster"><a href="#"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 4.2M</span><span><i class="fa-solid fa-heart"></i> 2.1M</span></div></div></a></div>
             </div>
-            
-            <section class="features-section">
-                <h2>Letterboxd lets you…</h2>
-                <div class="features-grid">
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
-                        <div class="feature-text">Keep track of every film you’ve ever watched (or just start from the day you join)</div>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
-                        <div class="feature-text">Show some love for your favorite films, lists and reviews with a “like”</div>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-list-ul"></i></div>
-                        <div class="feature-text">Write and share reviews, and follow friends and other members to read theirs</div>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
-                        <div class="feature-text">Rate each film on a five-star scale (with halves) to record and share your reaction</div>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
-                        <div class="feature-text">Keep a diary of your film watching (and upgrade to <a href="#"><strong>Pro</strong></a> for comprehensive stats)</div>
-                    </div>
-                    <div class="feature-box">
-                        <div class="feature-icon"><i class="fa-solid fa-table-cells-large"></i></div>
-                        <div class="feature-text">Compile and share lists of films on any topic and keep a watchlist of films to see</div>
-                    </div>
-                </div>
-            </section>
         </div>
-        <h2 class="section-heading">Just Reviewed…</h2> <span id="live-count">2,717,231,325</span> films watched
-        <div class="film-grid just-reviewed-grid"> <div class="film-poster just-reviewed-poster">
-                <a href="#">
-                    <img src="https://posterhouse.org/wp-content/uploads/2021/05/silence_of_the_lambs_0.jpg" alt="Sılience Of the LAMBS">
-                </a>
-            </div>
-            <div class="film-poster just-reviewed-poster">
-                <a href="#">
-                    <img src="https://cdn.kinocheck.com/i/l118zqk7kd.jpg" alt="28 Years Later">
-                </a>
-            </div>
-            <div class="film-poster just-reviewed-poster">
-                <a href="#">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_%282016_poster%29.png" alt=" Deadpool ">
-                </a>
-            </div>
-            <div class="film-poster just-reviewed-poster">
-                <a href="#">
-                    <img src="https://resizing.flixster.com/YACs9c0ZD2ZocmTdBgDl51CUjLc=/206x305/v2/https://resizing.flixster.com/5Q22ZbwHwgkaD60RZvLq-j6oE9c=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2YyYmY3OGU3LWY2ZDgtNGNhYy04NmJhLWFiZGM2YjM3YTI1Zi5qcGc=" alt="Formula1">
-                </a>
-            </div>
-            <div class="film-poster just-reviewed-poster">
-                <a href="#">
-                    <img src="https://www.emagine-entertainment.com/wp-content/uploads/2025/06/IKnowWhat.jpg" alt="I Know What You Did Last Summer">
-                </a>
-            </div>
-            
-        </div>
-            <footer>
-                <div class="footer-col">
-                    <h4>About</h4>
-                    <ul><li><a href="#">About</a></li><li><a href="#">Contact</a></li><li><a href="#">News</a></li><li><a href="#">Help</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Pro</h4>
-                    <ul><li><a href="#">Go Pro</a></li><li><a href="#">Patron</a></li><li><a href="#">Gift a Pro Membership</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Apps</h4>
-                    <ul><li><a href="#">iPhone</a></li><li><a href="#">iPad</a></li><li><a href="#">Android</a></li><li><a href="#">Apple TV</a></li></ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Social</h4>
-        <footer>
-        <div class="rounded-social-buttons">
-                            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a class="social-button X" href="https://www.x.com/" target="_blank"><i class="fab fa-x"></i></a>
-                            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
-                            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-                            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </div>
-        </footer>
 
-        </body>
-        </html>
+        <section class="features-section">
+            <h2>Letterboxd lets you…</h2>
+            <div class="features-grid">
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-eye"></i></div><div class="feature-text">Keep track of every film you’ve ever watched</div></div>
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-heart"></i></div><div class="feature-text">Show some love for your favorite films with a “like”</div></div>
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-list-ul"></i></div><div class="feature-text">Write and share reviews, and follow members</div></div>
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-star"></i></div><div class="feature-text">Rate each film on a five-star scale</div></div>
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-tag"></i></div><div class="feature-text">Keep a diary of your film watching</div></div>
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-table-cells-large"></i></div><div class="feature-text">Compile and share lists of films on any topic</div></div>
+            </div>
+        </section>
+
+        <section class="reviewed-films">
+            <div class="just-reviewed-header">
+                <h2>JUST REVIEWED...</h2>
+                <span id="live-count">2,717,348,771 films watched</span>
+            </div>
+            <hr class="section-divider">
+            <div class="film-grid just-reviewed-grid">
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYThhZjU4MTYtNDI5Ni00NTE0LTk2NjUtZmZhMGFiNDhiNDM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYWIwMTIxZTQtNDZhNS00ZDZlLTg5MTEtOTNkMmNjOGUzMTA1XkEyXkFqcGc@._V1_.jpg   " alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNjgwYTI0YjctMWYzNS00MmI1LWI5YTctNmE1YjBkNDFlNWMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYWQwMGRhNGEtZTNhMy00MzVjLWJhMjItYjcwMDljMTkyNTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://static.boxofficeturkiye.com/movie/poster/300x429/40/2017440-74175595.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://tr.web.img3.acsta.net/pictures/16/09/27/12/30/167064.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p20974_p_v10_aq.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://preview.redd.it/in-bullet-train-2022-the-main-character-brad-pitt-takes-a-v0-4tu3wpuv81m91.jpg?auto=webp&s=1da3b24522d440fc4a69adfc62cc9d21397516d3" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/I/81y0foYjoFL._UF1000,1000_QL80_.jpg" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://i0.wp.com/dialmformovie.net/wp-content/uploads/2024/08/Dial-M-Alien-Romulus-cover.jpg?fit=661%2C762&ssl=1" alt="Film Afişi"></a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links"><a href="#">About</a><a href="#">Pro</a><a href="#">News</a><a href="#">Apps</a><a href="#">Podcast</a><a href="#">Year in Review</a><a href="#">Gifts</a><a href="#">Help</a><a href="#">Terms</a><a href="#">API</a><a href="#">Contact</a></div>
+            <div class="footer-social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+            <div class="footer-copyright"><p>© Letterboxd Limited. Made by fans in Aotearoa New Zealand. Film data from TMDb. Mobile site.</p></div>
+        </div>
+    </footer>
+
+</body>
+</html>
