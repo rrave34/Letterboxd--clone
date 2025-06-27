@@ -22,7 +22,16 @@ header {
     border-bottom: 1px solid rgba(154, 187, 204, 0.1);
     box-sizing: border-box;
 }
-
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: "Giant Gnome";
+    unicode-bidi: isolate;
+}
 main {
    background-size: cover;
     background-position: center top;
@@ -33,16 +42,49 @@ main {
 }
 
 .hero-section {
-    height: 100%;
-    padding-top: 200px;
-    background-image: url("slider.jpg");
-    background-size: none;
-    background-repeat: no-repeat;
-    background-position: center center;
+    position: relative;
+    background-image: url('slider.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right, #0a0a0a 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, #0a0a0a 100%);
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #00e054;
+    color: #000;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
 
 .welcome-section {
     max-width: 800px;
@@ -285,15 +327,63 @@ nav a:hover {
     color: #00e054;
 }
 
-.just-reviewed-poster:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 0 0 4px #00e054; 
-  
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+just-reviewed-section {
+     max-width: 100%; 
+     margin: 60px auto; 
+     padding: 0 80px; 
+     box-sizing: border-box;
+}
+
+
+.just-reviewed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.just-reviewed-header h2 {
+    color: #9ab;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    margin: 0;
+}
+
+.just-reviewed-header .film-count {
+    font-size: px;
+    color: #9ab;
+    text-align: right;
+}
+
+
+.just-reviewed-section hr {
+    border: 0;
+    height: 1px;
+    background: rgba(154, 187, 204, 0.1);
+    margin: 15px 0 25px 0;
 }
 
 .just-reviewed-grid .film-poster {
-  width: 100px;
+ width: 140px;
+height: 210px;
+border: 2px solid transparent; 
+    margin: 0; 
+    gap: 0;
 }
+
+
+.just-reviewed-poster:hover {
+    box-shadow: 0 0 0 3px #00e054; 
+    transform: scale(1.03);
+}
+
+
 footer {
     background-color: #2c3440;
     padding: 40px;
@@ -317,7 +407,7 @@ footer {
     color: #fff;
     text-transform: uppercase;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
 }  
 .footer-col ul { list-style: none; padding: 0; margin: 0; } 
 .footer-col ul li { margin-bottom: 10px; }
@@ -327,7 +417,7 @@ footer {
 
 
 body {
-    background: #000000;
+    background: #14181c;
     padding-top: 60px;
     padding-bottom: 40px;
 }
@@ -413,4 +503,26 @@ textarea {
     
 .rounded-social-buttons .social-button.instagram {
   background: #091014;
+}
+
+.browse-by {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  gap: 15px;               
+  margin: 40px 0;      
+  color: #89a;             
+  font-size: 1rem;         
+}
+
+
+.store-logo {
+  font-size: 28px;      
+  color: #89a;            
+  text-decoration: none;  
+  transition: color 0.3s ease; 
+}
+
+.store-logo:hover {
+  color: #fff;
 }
