@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films - Letterboxd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+4:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="anasayfa.css">
+    
+    <link rel="stylesheet" href="films.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html"><img src="resim/Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo" style="height: 24px;"></a>
+            </div>
+            <nav>
+                <a href="#" data-modal-target="#signin-modal">SIGN IN</a>
+                <a href="#" data-modal-target="#create-account-modal">CREATE ACCOUNT</a>
+                <a href="films.html">FILMS</a>
+                <a href="#">LISTS</a>
+                <a href="#">MEMBERS</a>
+                <a href="#">JOURNAL</a>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..."><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="films-page-container">
+            
+            <nav class="sub-nav">
+                <div class="sub-nav-left">
+                    <span>BROWSE BY:</span>
+                    <a href="#" class="active">POPULAR</a>
+                    <a href="#">RATINGS</a>
+                    <a href="#">MEMBERS</a>
+                    <a href="#">REVIEWS</a>
+                </div>
+                <div class="sub-nav-right">
+                    <span>FIND A FILM</span>
+                    <input type="text" placeholder="Enter title, person, or list...">
+                    <button>GO</button>
+                </div>
+            </nav>
+
+            <section class="horizontal-film-strip">
+                <h4>POPULAR FILMS THIS WEEK</h4>
+                <div class="strip-posters">
+                    <a href="#"><img src="https://weltecho.eu/wp-content/uploads/dune-hoch-790x1161.jpg" alt="Film 1"></a>
+                    <a href="#"><img src="https://tr.web.img3.acsta.net/pictures/bzp/01/61318.jpg" alt="Film 2"></a>
+                    <a href="#"><img src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S2_1200x1600-41d1b88814bea2ee8cb7986ec24713e0" alt="Film 3"></a>
+                    <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film 4"></a>
+                    <a href="#"><img src="https://tr.web.img2.acsta.net/pictures/bzp/01/25096.jpg" alt="Film 5"></a>
+                    <a href="#"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Film 6"></a>
+                </div>
+            </section>
+
+            <div class="main-content-area">
+                
+                <div class="review-feed">
+                    <h4>POPULAR REVIEWS THIS WEEK</h4>
+
+                    <div class="review-card">
+                        <div class="review-poster">
+                            <img src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S2_1200x1600-41d1b88814bea2ee8cb7986ec24713e0" alt="Inside Out 2 Poster">
+                        </div>
+                        <div class="review-content">
+                            <div class="review-header">
+                                <img src="https://i.pravatar.cc/40?img=1" alt="Avatar" class="avatar">
+                                <div class="user-info">
+                                    <span class="film-title">The Last Of Us <span class="year">2024</span></span>
+                                    <span class="user-name">Reviewed by <strong>CinemaJoe</strong></span>
+                                </div>
+                                <div class="star-rating">★★★★½</div>
+                            </div>
+                            <p class="review-text">
+                                A poignant and hilarious exploration of teenage anxiety that beautifully expands on the original. A must-see for all ages.
+                            </p>
+                        </div>
+                    </div>
+
+                     <div class="review-card">
+                        <div class="review-poster">
+                            <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/61318.jpg" alt="Hit Man Poster">
+                        </div>
+                        <div class="review-content">
+                            <div class="review-header">
+                                <img src="https://i.pravatar.cc/40?img=2" alt="Avatar" class="avatar">
+                                <div class="user-info">
+                                    <span class="film-title">Hit Man <span class="year">2024</span></span>
+                                    <span class="user-name">Reviewed by <strong>MovieMaven</strong></span>
+                                </div>
+                                <div class="star-rating">★★★★</div>
+                            </div>
+                            <p class="review-text">
+                                Glen Powell is absolutely magnetic in this clever and endlessly charming rom-com action flick. One of the most enjoyable films of the year.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="right-sidebar">
+                    <div class="sidebar-widget">
+                        <h4>SEEN FROM</h4>
+                        <div class="mini-poster-grid">
+                            <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_.jpg" alt=""></a>
+                            <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg" alt=""></a>
+                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/tr/b/bb/Forrest_Gump_%28film%2C_1994%29.jpg" alt=""></a>
+                            <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>POPULAR REVIEWERS</h4>
+                        <ul class="user-list">
+                            <li><a href="#"><img src="https://i.pravatar.cc/32?img=3" alt=""><span>James (Schaffrillas)</span></a></li>
+                            <li><a href="#"><img src="https://i.pravatar.cc/32?img=4" alt=""><span>bratpitt</span></a></li>
+                            <li><a href="#"><img src="https://i.pravatar.cc/32?img=5" alt=""><span>CinemaJoe</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+        </footer>
+
+    <div id="signin-modal" class="modal-arkaplan">
+        </div>
+    <div id="create-account-modal" class="modal-arkaplan">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

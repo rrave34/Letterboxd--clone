@@ -10,16 +10,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="anasayfa.css">
 </head>
-<body>
+<div id="create-account-modal" class="modal-arkaplan">
+    <div class="modal-icerik">
+        
+        <form id="create-account-form">
+            <h2 class="modal-baslik">JOIN LETTERBOXD</h2>
+            <fieldset class="fieldset">
+                <div class="fields">
+                    <div class="col">
+                        <label for="ca-email">Email address</label>
+                        <input type="email" name="email" id="ca-email" class="field">
+                    </div>
+                    <div class="col">
+                        <label for="ca-username">Username</label>
+                        <input type="text" name="username" id="ca-username" class="field">
+                    </div>
+                    <div class="col">
+                        <label for="ca-password">Password</label>
+                        <input type="password" name="password" id="ca-password" class="field">
+                    </div>
+
+                    <div class="col-checkbox">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">I'm at least 16 years old and accept the Terms of Use.</label>
+                    </div>
+                    <div class="col-checkbox">
+                        <input type="checkbox" id="privacy" name="privacy">
+                        <label for="privacy">I accept the Privacy Policy and consent to the processing of my personal information in accordance with it.</label>
+                    </div>
+
+                    <div class="captcha-placeholder">
+                        <input type="checkbox" id="captcha" name="captcha">
+                        <label for="captcha">Ben bir insanım</label>
+                        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                    </div>
+
+                    <div class="col buttons">
+                        <input type="submit" value="Sign Up" class="button -action button-green">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="close js-close-modal">×</div>
+    </div>
+</div>
+<body>  
     <header>
         <div class="header-left">
             <div class="logo">
                 <a href="index.html"><img src="resim/Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo"></a>
             </div>
             <nav>
-                <a href="#" id="open-signin-btn">SIGN IN</a>
-                <a href="#">CREATE ACCOUNT</a>
-                <a href="#">FILMS</a>
+               <nav>
+    <a href="#" data-modal-target="#signin-modal">SIGN IN</a>
+    <a href="#" data-modal-target="#create-account-modal">CREATE ACCOUNT</a>
+
+                <a href="films.html">FILMS</a>
                 <a href="#">LISTS</a>
                 <a href="#">MEMBERS</a>
                 <a href="#">JOURNAL</a>
@@ -128,7 +175,7 @@
 
     <footer>
         <div class="footer-container">
-            <div class="footer-links"><a href="#">About</a><a href="#">Pro</a><a href="#">News</a><a href="#">Apps</a><a href="#">Podcast</a><a href="#">Year in Review</a><a href="#">Gifts</a><a href="#">Help</a><a href="#">Terms</a><a href="#">API</a><a href="#">Contact</a></div>
+            <div class="footer-links"><a href="about.html">About</a><a href="#">Pro</a><a href="#">News</a><a href="#">Apps</a><a href="#">Podcast</a><a href="#">Year in Review</a><a href="#">Gifts</a><a href="#">Help</a><a href="#">Terms</a><a href="#">API</a><a href="#">Contact</a></div>
             <div class="footer-social-icons">
     <a href="https://www.instagram.com/letterboxd" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     <a href="https://x.com/letterboxd" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
@@ -168,6 +215,6 @@
                 </div>
             </fieldset>
         </form>
-        <div class="close js-close-signin">×</div>
+      <div class="close js-close-modal">×</div> 
     </div>
 </div>

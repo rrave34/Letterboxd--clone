@@ -1,61 +1,64 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Gerekli HTML elemanlarını seçip değişkenlere atıyoruz.
-    const openSigninBtn = document.getElementById('open-signin-btn');
-    const signinModal = document.getElementById('signin-modal');
-    
-    // Bu elemanlar sayfada varsa devam et (hata almayı engeller)
-    if (openSigninBtn && signinModal) {
-        
-        // Modal içindeki elemanları seçiyoruz
-        const closeModalBtn = signinModal.querySelector('.js-close-signin'); 
-        const signinForm = document.getElementById('signin-form');
-        const usernameInput = document.getElementById('username');
-        const passwordInput = document.getElementById('password');
-        const hataMesaji = document.getElementById('hata-mesaji');
+document.addEventListener('DOMContentLoaded', () => {
 
-        // Header'daki "SIGN IN" butonuna tıklandığında modalı göster.
-        openSigninBtn.addEventListener('click', function(e) {
-            e.preventDefault(); // Linkin normal davranışını engelle
-            signinModal.classList.add('goster');
+    const openModalButtons = document.querySelectorAll('[data-modal-target]');
+    const closeModalButtons = document.querySelectorAll('.js-close-modal');
+
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = document.querySelector(button.dataset.modalTarget);
+            openModal(modal);
         });
+    });
 
-        // Modalı kapatmak için ortak bir fonksiyon
-        const closeTheModal = () => {
-            signinModal.classList.remove('goster');
-            // Hata mesajı varsa, onu da gizle
-            if (hataMesaji) {
-                hataMesaji.classList.remove('goster');
-            }
-        };
-
-        // Modal'daki 'X' butonuna tıklandığında modalı gizle.
-        closeModalBtn.addEventListener('click', closeTheModal);
-
-        // Modal'ın dışındaki arkaplana tıklandığında modalı gizle.
-        signinModal.addEventListener('click', function(e) {
-            // Sadece arkaplanın kendisine tıklandıysa kapat
-            if (e.target === signinModal) {
-                closeTheModal();
+    closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal-arkaplan');
+            closeModal(modal);
+        });
+    });
+    
+    document.querySelectorAll('.modal-arkaplan').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal(modal);
             }
         });
+    });
 
-        // Formdaki "SIGN IN" butonuna basıldığında (form gönderildiğinde) çalışacak kod.
+    function openModal(modal) {
+        if (modal == null) return;
+        modal.classList.add('goster');
+    }
+
+    function closeModal(modal) {
+        if (modal == null) return;
+        modal.classList.remove('goster');
+    }
+
+    // --- FORM İŞLEMLERİ ---
+    const signinForm = document.getElementById('signin-form');
+    if (signinForm) {
         signinForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Formun sayfayı yenilemesini engelle.
+            e.preventDefault();
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const hataMesaji = document.getElementById('hata-mesaji');
 
             if (usernameInput.value.trim() === '' || passwordInput.value.trim() === '') {
-                // Alanlar boşsa hata mesajını göster
                 hataMesaji.classList.add('goster');
             } else {
-                // Alanlar doluysa hata mesajını gizle ve başarı mesajı ver
                 hataMesaji.classList.remove('goster');
                 alert('Giriş denemesi başarılı!');
-                
-                // İsteğe bağlı: Başarılı giriş sonrası modalı kapatmak için bu satırı aktif et
-                // closeTheModal();
             }
         });
     }
-
+    
+    const createAccountForm = document.getElementById('create-account-form');
+    if(createAccountForm) {
+        createAccountForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Hesap oluşturma denemesi!');
+        });
+    }
 });

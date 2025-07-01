@@ -96,7 +96,7 @@ main {
 
 .hero-section { 
     position: relative; 
-    background-image: url('slider.jpg'); 
+    background-image: url('resim/slider.jpg'); 
     background-size: cover; 
     background-position: center; 
     height: 70vh; 
@@ -650,3 +650,45 @@ footer {
 .signin-btn:hover {
     background-color: #00c44a;
 } 
+.modal-baslik {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.col-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #9ab;
+}
+
+.col-checkbox input[type="checkbox"] {
+    margin-top: 2px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Checkbox'ın küçülmesini engelle */
+}
+
+.captcha-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+.captcha-placeholder label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+.captcha-placeholder img {
+    height: 32px;
+}
