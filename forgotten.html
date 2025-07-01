@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  
+  
+  
+  <style>
+    
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #14181c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .reset-container {
+      background-color: #445566;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.945);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .reset-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #00ac1c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .reset-btn:hover {
+      background-color: #009e15;
+    }
+
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .message.success {
+      color: rgb(103, 114, 112);
+    }
+
+    .message.error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="reset-container">
+    <h2>Reset Password</h2>
+    <form id="reset-form">
+      <p>Reset password
+Enter your email below, and we’ll send you a message with your username and a link to reset your password.</p>
+        <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required placeholder=>
+      </div>
+      <button type="submit" class="reset-btn">Send Reset Link</button>
+      <div id="message" class="message"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('reset-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message');
+
+      if (email.trim() === '') {
+        message.textContent = 'Please enter a valid email.';
+        message.className = 'message error';
+      } else {
+        message.textContent = 'The reset link has been sent to your email address..';
+        message.className = 'message success';
+      }
+    });
+  </script>
+
+</body>
+</html>

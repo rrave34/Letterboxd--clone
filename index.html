@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letterboxd</title>
+    <title>Letterboxd - Track Films</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="anasayfa.css">
 </head>
-
 <body>
     <header>
         <div class="header-left">
             <div class="logo">
-                <a href="#"><img src="resim/Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo"></a>
+                <a href="index.html"><img src="resim/Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo"></a>
             </div>
             <nav>
-                <a href="#">SIGN IN</a><a href="#">CREATE ACCOUNT</a><a href="#">FILMS</a><a href="#">LISTS</a><a href="#">MEMBERS</a><a href="#">JOURNAL</a>
+                <a href="#" id="open-signin-btn">SIGN IN</a>
+                <a href="#">CREATE ACCOUNT</a>
+                <a href="#">FILMS</a>
+                <a href="#">LISTS</a>
+                <a href="#">MEMBERS</a>
+                <a href="#">JOURNAL</a>
             </nav>
         </div>
         <div class="search-container">
@@ -35,25 +36,60 @@
                 <h1>Track films you’ve watched.</h1>
                 <h1>Save those you want to see.</h1>
                 <h1>Tell your friends what’s good.</h1>
-                <p>Get started today — it’s free. The social network for film lovers.</p>
-                <div class="cta-buttons"><a href="#">Get started- It's Free</a></div>
+                <div class="cta-buttons">
+                    <a href="#">Get Started — It’s Free</a>
+                </div>
+                <div class="browse-by">
+                    <span>The social network for film lovers. Also available on</span>
+                    <a href="#" class="store-logo"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#" class="store-logo"><i class="fa-brands fa-android"></i></a>
+                </div>
             </div>
         </div>
         
-        <div class="browse-by">
-            <span>The social network for film lovers. Also available on</span>
-            <a href="#" class="store-logo"><i class="fa-brands fa-apple"></i></a>
-            <a href="#" class="store-logo"><i class="fa-brands fa-android"></i></a>
-        </div>
-
         <div class="film-galerisi">
-            <h2>POPULAR MOVIES</h2>
+            <h2>POPULAR FILMS THIS MONTH</h2>
             <div class="film-grid">
-                <div class="film-poster"><a href="dune.html"><img src="https://weltecho.eu/wp-content/uploads/dune-hoch-790x1161.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 1.2M</span><span><i class="fa-solid fa-heart"></i> 250K</span></div></div></a></div>
-                <div class="film-poster"><a href="hitman.html"><img src="https://m.media-amazon.com/images/M/MV5BZTU4YTUzNGMtZjUyZC00MWU3LWFiZmItMmIwMDA5YmViNGU3XkEyXkFqcGc@._V1_.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 850K</span><span><i class="fa-solid fa-heart"></i> 180K</span></div></div></a></div>
-                <div class="film-poster"><a href="Thelastofus.html"><img src="https://tr.web.img4.acsta.net/pictures/22/11/30/19/53/5856320.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 2.1M</span><span><i class="fa-solid fa-heart"></i> 980K</span></div></div></a></div>
-                <div class="film-poster"><a href="spidermanacrossthespiderverse.html"><img src="https://m.media-amazon.com/images/I/81+HfwcH-lL.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 3.5M</span><span><i class="fa-solid fa-heart"></i> 1.8M</span></div></div></a></div>
-                 <div class="film-poster"><a href="oppenheimer.html"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Film Afişi"><div class="poster-overlay"><div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 4.2M</span><span><i class="fa-solid fa-heart"></i> 2.1M</span></div></div></a></div>
+                <div class="film-poster">
+                    <a href="dune.html">
+                        <img src="https://weltecho.eu/wp-content/uploads/dune-hoch-790x1161.jpg" alt="Dune: Part Two">
+                        <div class="poster-overlay">
+                            <div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 1.2M</span><span><i class="fa-solid fa-heart"></i> 250K</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="film-poster">
+                    <a href="#">
+                        <img src="https://tr.web.img3.acsta.net/pictures/bzp/01/61318.jpg" alt="Hit Man">
+                        <div class="poster-overlay">
+                            <div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 850K</span><span><i class="fa-solid fa-heart"></i> 180K</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="film-poster">
+                    <a href="#">
+                        <img src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S2_1200x1600-41d1b88814bea2ee8cb7986ec24713e0" alt="Inside Out 2">
+                        <div class="poster-overlay">
+                            <div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 2.1M</span><span><i class="fa-solid fa-heart"></i> 980K</span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="film-poster">
+                    <a href="#">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Furiosa: A Mad Max Saga">
+                        <div class="poster-overlay">
+                            <div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 3.5M</span><span><i class="fa-solid fa-heart"></i> 1.8M</span></div>
+                        </div>
+                    </a>
+                </div>
+                 <div class="film-poster">
+                    <a href="#">
+                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg" alt="Oppenheimer">
+                        <div class="poster-overlay">
+                            <div class="poster-stats"><span><i class="fa-solid fa-eye"></i> 4.2M</span><span><i class="fa-solid fa-heart"></i> 2.1M</span></div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -64,7 +100,7 @@
                 <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-heart"></i></div><div class="feature-text">Show some love for your favorite films with a “like”</div></div>
                 <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-list-ul"></i></div><div class="feature-text">Write and share reviews, and follow members</div></div>
                 <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-star"></i></div><div class="feature-text">Rate each film on a five-star scale</div></div>
-                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-tag"></i></div><div class="feature-text">Keep a diary of your film watching</div></div>
+                <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-calendar-days"></i></div><div class="feature-text">Keep a diary of your film watching</div></div>
                 <div class="feature-box"><div class="feature-icon"><i class="fa-solid fa-table-cells-large"></i></div><div class="feature-text">Compile and share lists of films on any topic</div></div>
             </div>
         </section>
@@ -72,22 +108,20 @@
         <section class="reviewed-films">
             <div class="just-reviewed-header">
                 <h2>JUST REVIEWED...</h2>
-                <span id="live-count">2,717,348,771 films watched</span>
             </div>
-            <hr class="section-divider">
             <div class="film-grid just-reviewed-grid">
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYThhZjU4MTYtNDI5Ni00NTE0LTk2NjUtZmZhMGFiNDhiNDM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYWIwMTIxZTQtNDZhNS00ZDZlLTg5MTEtOTNkMmNjOGUzMTA1XkEyXkFqcGc@._V1_.jpg   " alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNjgwYTI0YjctMWYzNS00MmI1LWI5YTctNmE1YjBkNDFlNWMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYWQwMGRhNGEtZTNhMy00MzVjLWJhMjItYjcwMDljMTkyNTg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://static.boxofficeturkiye.com/movie/poster/300x429/40/2017440-74175595.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://tr.web.img3.acsta.net/pictures/16/09/27/12/30/167064.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p20974_p_v10_aq.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://preview.redd.it/in-bullet-train-2022-the-main-character-brad-pitt-takes-a-v0-4tu3wpuv81m91.jpg?auto=webp&s=1da3b24522d440fc4a69adfc62cc9d21397516d3" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/I/81y0foYjoFL._UF1000,1000_QL80_.jpg" alt="Film Afişi"></a></div>
-                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://i0.wp.com/dialmformovie.net/wp-content/uploads/2024/08/Dial-M-Alien-Romulus-cover.jpg?fit=661%2C762&ssl=1" alt="Film Afişi"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_.jpg" alt="The Lord of the Rings: The Fellowship of the Ring"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://play-lh.googleusercontent.com/auIs5tjWlLYaFPGClZOJ7m5YVbnX6uBvz0X02r8TkwFKdzE53ww2MqWSS9gU0YNqoYwvpg" alt="The Dark Knight"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg" alt="Pulp Fiction"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_.jpg" alt="The Godfather"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg" alt="Fight Club"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://upload.wikimedia.org/wikipedia/tr/b/bb/Forrest_Gump_%28film%2C_1994%29.jpg" alt="Forrest Gump"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Shawshank Redemption"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://play-lh.googleusercontent.com/kSeBtvMBvS9P9jSwP-bVNmrH8yANJeKZrbxUIiw6zSOpRibxBn1IP7PEHrDeoIz0AmQPddbRPMEgh8KL8ohd" alt="Inception"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_.jpg" alt="The Empire Strikes Back"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_.jpg" alt="Interstellar"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg" alt="The Matrix"></a></div>
+                <div class="film-poster just-reviewed-poster"><a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_.jpg" alt="The Lord of the Rings: The Return of the King"></a></div>
             </div>
         </section>
     </main>
@@ -95,10 +129,45 @@
     <footer>
         <div class="footer-container">
             <div class="footer-links"><a href="#">About</a><a href="#">Pro</a><a href="#">News</a><a href="#">Apps</a><a href="#">Podcast</a><a href="#">Year in Review</a><a href="#">Gifts</a><a href="#">Help</a><a href="#">Terms</a><a href="#">API</a><a href="#">Contact</a></div>
-            <div class="footer-social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+            <div class="footer-social-icons">
+    <a href="https://www.instagram.com/letterboxd" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com/letterboxd" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.facebook.com/letterboxd" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.youtube.com/@LetterboxdHQ" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@letterboxd" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+</div>  
             <div class="footer-copyright"><p>© Letterboxd Limited. Made by fans in Aotearoa New Zealand. Film data from TMDb. Mobile site.</p></div>
         </div>
     </footer>
 
-</body>
-</html>
+    <div id="signin-modal" class="modal-arkaplan">
+    <div class="modal-icerik">
+        
+        <form id="signin-form">
+            <fieldset class="fieldset">
+                <div class="fields">
+                    <div class="col">
+                        <label for="username">Username</label>
+                        <input type="email" name="username" id="username" class="field signin-field" tabindex="1" autocomplete="email" inputmode="email" value="">
+                    </div>
+                    <div class="col">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="field signin-field" tabindex="2" autocomplete="current-password" value="">
+                    </div>
+                    <div class="signin-actions">
+                        <label for="remember" class="option-label -checkbox -small">
+                            <input type="checkbox" name="remember" id="remember" class="checkbox" tabindex="3" value="true"><i class="substitute"></i>
+                            <span class="focus">Remember me</span>
+                        </label>
+                        <p class="reset" tabindex="5"><a class="reset-password-link" href="#">Forgotten?</a></p>
+                    </div>
+                    <div class="col buttons">
+                         <p class="hata-mesaji" id="hata-mesaji">Your credentials don’t match.</p>
+                        <div class="button-container"><input type="submit" value="Sign in" class="button -action button-green" tabindex="4"></div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="close js-close-signin">×</div>
+    </div>
+</div>
