@@ -63,7 +63,7 @@
             </div>
             <nav>
                <nav>
-    <a href="#" data-modal-target="#signin-modal">SIGN IN</a>
+    <a href="#" data-modal-target="#signin-modal" class="sign-btn">SIGN IN</a>
     <a href="#" data-modal-target="#create-account-modal">CREATE ACCOUNT</a>
 
                 <a href="films.html">FILMS</a>
@@ -187,34 +187,37 @@
         </div>
     </footer>
 
-    <div id="signin-modal" class="modal-arkaplan">
+
+
+<div id="signin-modal" class="modal-arkaplan">
     <div class="modal-icerik">
         
-        <form id="signin-form">
-            <fieldset class="fieldset">
-                <div class="fields">
-                    <div class="col">
-                        <label for="username">Username</label>
-                        <input type="email" name="username" id="username" class="field signin-field" tabindex="1" autocomplete="email" inputmode="email" value="">
-                    </div>
-                    <div class="col">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="field signin-field" tabindex="2" autocomplete="current-password" value="">
-                    </div>
-                    <div class="signin-actions">
-                        <label for="remember" class="option-label -checkbox -small">
-                            <input type="checkbox" name="remember" id="remember" class="checkbox" tabindex="3" value="true"><i class="substitute"></i>
-                            <span class="focus">Remember me</span>
-                        </label>
-                        <p class="reset" tabindex="5"><a class="reset-password-link" href="#">Forgotten?</a></p>
-                    </div>
-                    <div class="col buttons">
-                         <p class="hata-mesaji" id="hata-mesaji">Your credentials don’t match.</p>
-                        <div class="button-container"><input type="submit" value="Sign in" class="button -action button-green" tabindex="4"></div>
-                    </div>
-                </div>
-            </fieldset>
+        <form id="signin-form" style="
+    gap: 20px;
+    display: flex;
+">
+            
+            <div class="form-grup">
+                <label for="signin-username">  &nbsp Username</label>
+                <input type="text" id="signin-username" name="username">
+            </div>
+            
+            <div class="form-grup">
+                <label for="signin-password"> Password</label>
+                <input type="password" id="signin-password" name="password">
+            </div>
+
+            <div class="form-grup remember-me-grup">
+                <input type="checkbox" id="remember">
+                <label for="remember me">Remember Me</label>
+            </div>
+
+            <button type="submit" class="signin-btn-modal">Sign in</button>
+
         </form>
-      <div class="close js-close-modal">×</div> 
     </div>
+</div>
+
+<script src="script.js"></script>
+
 </div>
