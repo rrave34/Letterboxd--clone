@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="anasayfa.css">
 </head>
+
 <div id="create-account-modal" class="modal-arkaplan">
     <div class="modal-icerik">
         
@@ -55,15 +56,8 @@
         <div class="close js-close-modal">×</div>
     </div>
 </div>
-<body>  
-   
-   
-   
-   
-   
-   
-   
-    <header>
+<body>     
+     <header>
         <div class="header-left">
             <div class="logo">
                 <a href="index.html"><img src="resim/Letterboxd-Logo-H-Pos-RGB.png" alt="Letterboxd Logo"></a>
@@ -179,6 +173,36 @@
             </div>
         </section>
     </main>
+<div id="signin-modal" class="modal-arkaplan">
+  <div class="modal-icerik" style="padding: 30px 40px; border-radius: 12px; max-width: 900px; width: 95%; background-color: #1a1e23; color: #fff; position: relative; box-shadow: 0 8px 24px rgba(0,0,0,0.7);">
+
+    <button class="close js-close-modal" aria-label="Close sign in modal" style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:28px; color:#888; cursor:pointer;">×</button>
+
+    <form id="signin-form" style="display: flex; align-items: center; gap: 20px;">
+
+      <div style="display: flex; flex-direction: column; flex: 1;">
+        <label for="signin-username" style="color: #aaa; font-size: 14px; margin-bottom: 5px;">Username</label>
+        <input type="text" id="signin-username" name="username" style="background-color: #2c3440; border: none; border-radius: 6px; color: #fff; font-size: 15px; padding: 10px;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; flex: 1;">
+        <label for="signin-password" style="color: #aaa; font-size: 14px; margin-bottom: 5px;">Password</label>
+        <input type="password" id="signin-password" name="password" style="background-color: #2c3440; border: none; border-radius: 6px; color: #fff; font-size: 15px; padding: 10px;">
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 8px; white-space: nowrap;">
+        <input type="checkbox" id="remember" style="width: 18px; height: 18px; accent-color: #666; cursor: pointer;">
+        <label for="remember" style="color: #aaa; font-size: 14px; cursor: pointer;">Remember Me</label>
+      </div>
+
+      <button type="submit" class="signin-btn-modal" style="background-color: #00e054; border: none; border-radius: 8px; color: #000; font-weight: 700; font-size: 16px; padding: 12px 25px; cursor: pointer; white-space: nowrap; transition: background-color 0.3s ease;">
+        Sign In
+      </button>
+
+    </form>
+  </div>
+</div>
+
 
     <footer>
         <div class="footer-container">
@@ -195,37 +219,65 @@
     </footer>
 
 
+<div id="create-account-modal" class="modal-arkaplan">
+  <div class="modal-icerik">
+    <button class="close js-close-modal" aria-label="Close create account modal">×</button>
 
-<div id="signin-modal" class="modal-arkaplan">
-    <div class="modal-icerik">
-        
-        <form id="signin-form" style="
-    gap: 20px;
-    display: flex;
-">
-            
-            <div class="form-grup">
-                <label for="signin-username">  &nbsp Username</label>
-                <input type="text" id="signin-username" name="username">
-            </div>
-            
-            <div class="form-grup">
-                <label for="signin-password"> Password</label>
-                <input type="password" id="signin-password" name="password">
-            </div>
+    <form id="create-account-form" style="display: flex; flex-direction: column; gap: 20px;">
+      <h2 style="color: #fff; margin-bottom: 10px; text-align: center;">JOIN LETTERBOXD</h2>
+      
+      <label for="ca-email" style="color: #aaa; font-size: 14px;">Email address</label>
+      <input type="email" name="email" id="ca-email" class="field" required>
 
-            <div class="form-grup remember-me-grup">
-                <input type="checkbox" id="remember">
-                <label for="remember me">Remember Me</label>
-            </div>
+      <label for="ca-username" style="color: #aaa; font-size: 14px;">Username</label>
+      <input type="text" name="username" id="ca-username" class="field" required>
 
-            <button type="submit" class="signin-btn-modal">Sign in</button>
+      <label for="ca-password" style="color: #aaa; font-size: 14px;">Password</label>
+      <input type="password" name="password" id="ca-password" class="field" required>
 
-        </form>
-    </div>
+      <div class="col-checkbox">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms" style="color: #aaa; font-size: 14px; cursor: pointer;">I'm at least 16 years old and accept the Terms of Use.</label>
+      </div>
+
+      <div class="col-checkbox">
+        <input type="checkbox" id="privacy" name="privacy" required>
+        <label for="privacy" style="color: #aaa; font-size: 14px; cursor: pointer;">I accept the Privacy Policy and consent to the processing of my personal information in accordance with it.</label>
+      </div>
+
+      <div class="col-checkbox">
+        <input type="checkbox" id="captcha" name="captcha" required>
+        <label for="captcha" style="color: #aaa; font-size: 14px; cursor: pointer;">Ben bir insanım</label>
+        <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" style="height: 24px; margin-left: 10px; vertical-align: middle;">
+      </div>
+
+      <input type="submit" value="Sign Up" class="button -action button-green" style="background-color: #00e054; border: none; color: #000; font-weight: bold; padding: 12px; border-radius: 8px; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;">
+
+    </form>
+  </div>
 </div>
+
+
+   <form id="signin-form" class="signin-form">
+  <div class="signin-group">
+    <label for="signin-username">Username</label>
+    <input type="text" id="signin-username" name="username" class="signin-input">
+  </div>
+
+  <div class="signin-group">
+    <label for="signin-password">Password</label>
+    <input type="password" id="signin-password" name="password" class="signin-input">
+  </div>
+
+  <div class="signin-group">
+    <input type="checkbox" id="remember" class="signin-checkbox">
+    <label for="remember">Remember Me</label>
+  </div>
+
+  <button type="submit" class="signin-btn-modal">Sign in</button>
+</form>
 
 
 <script src="script.js"></script>
 
-</div>
+</div>  
