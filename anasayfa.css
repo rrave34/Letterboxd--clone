@@ -453,7 +453,7 @@ footer {
 
 .modal-icerik {
   background-color: #1a1e23;
-  padding: 30px 40px;
+  
   border-radius: 12px;
   max-width: 400px;
   width: 90%;
@@ -534,7 +534,7 @@ footer {
       background-color: #00e054;
       border: none;
       border-radius: 8px;
-      color: #000;
+      color: #ffffff;
       font-weight: 700;
       font-size: 16px;
       padding: 12px 0;
